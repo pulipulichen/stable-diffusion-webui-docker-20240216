@@ -7,3 +7,4 @@ git commit -m "Changes made at $commit_time"
 
 # Push changes to the remote repository
 git push
+
