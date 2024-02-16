@@ -41,6 +41,12 @@ MOUNTS["${ROOT}/styles.csv"]="/data/config/auto/styles.csv"
 MOUNTS["${ROOT}/extensions"]="/data/config/auto/extensions"
 MOUNTS["${ROOT}/config_states"]="/data/config/auto/config_states"
 
+# pudding
+# MOUNTS["/media/pudding/SSD2T-Linux/Docker-Projects/stable-diffusion-webui-docker/data/config/auto/extensions/sd-webui-controlnet/models"]="/data/config/auto/extensions/sd-webui-controlnet/models"
+#MOUNTS["/media/pudding/SSD2T-Linux/Docker-Projects/stable-diffusion-webui-docker/data/config/auto/extensions/sd-webui-controlnet/models"]="/stable-diffusion-webui/extensions/sd-webui-controlnet/models"
+
+#- &v3 /media/pudding/SSD2T-Linux/Docker-Projects/stable-diffusion-webui-docker/data/config/auto/extensions/sd-webui-controlnet/models:/stable-diffusion-webui/extensions/sd-webui-controlnet/models/models
+
 # extra hacks
 MOUNTS["${ROOT}/repositories/CodeFormer/weights/facelib"]="/data/.cache"
 

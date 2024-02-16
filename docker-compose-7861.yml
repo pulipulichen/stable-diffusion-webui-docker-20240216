@@ -2,11 +2,10 @@ version: '3.9'
 
 x-base_service: &base_service
     ports:
-      - "${WEBUI_PORT:-7860}:7860"
+      - "${WEBUI_PORT:-7861}:7860"
     volumes:
       - &v1 ./data:/data
       - &v2 ./output:/output
-      #- &v3 /media/pudding/SSD2T-Linux/Docker-Projects/stable-diffusion-webui-docker/data/config/auto/extensions/sd-webui-controlnet/models:/stable-diffusion-webui/extensions/sd-webui-controlnet/models/models
     stop_signal: SIGKILL
     tty: true
     deploy:
@@ -31,8 +30,6 @@ services:
     profiles: ["auto"]
     build: ./services/AUTOMATIC1111
     image: sd-auto:72
-    #volumes:
-    #- /media/pudding/SSD2T-Linux/Docker-Projects/stable-diffusion-webui-docker/data/config/auto/extensions/sd-webui-controlnet/models/:/data/config/auto/extensions/sd-webui-controlnet/models/
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
 
@@ -64,6 +61,8 @@ services:
     profiles: ["comfy"]
     build: ./services/comfy/
     image: sd-comfy:6
+    #volumes:
+      #- ./data/models/clip_vision/:/stable-diffusion/models/clip_vision
     environment:
       - CLI_ARGS=
 
