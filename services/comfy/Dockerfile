@@ -9,8 +9,10 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   git clone https://github.com/comfyanonymous/ComfyUI.git ${ROOT} && \
   cd ${ROOT} && \
   git checkout master && \
-  git reset --hard d1f3637a5a944d0607b899babd8ff11d87100503 && \
+  git reset --hard dccca1daa5af1954d55918f365e83a3331019549 && \
   pip install -r requirements.txt
+
+# git reset --hard d1f3637a5a944d0607b899babd8ff11d87100503 && \
 
 WORKDIR ${ROOT}
 COPY . /docker/

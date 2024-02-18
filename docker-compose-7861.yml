@@ -65,6 +65,8 @@ services:
       #- ./data/models/clip_vision/:/stable-diffusion/models/clip_vision
     environment:
       - CLI_ARGS=
+    networks:
+      - comfy_network
 
 
   comfy-cpu:
@@ -73,3 +75,7 @@ services:
     deploy: {}
     environment:
       - CLI_ARGS=--cpu
+
+networks:
+  comfy_network:
+    driver: bridge
