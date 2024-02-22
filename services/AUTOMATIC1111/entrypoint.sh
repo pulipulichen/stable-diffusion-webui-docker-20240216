@@ -92,4 +92,6 @@ echo "Try to install rembg"
 pip install rembg==2.0.54
 pip install dlib==19.24.2
 
+pip install insightface==0.7.3
+
 exec "$@"

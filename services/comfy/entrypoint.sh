@@ -48,4 +48,17 @@ if [ -f "/data/config/comfy/startup.sh" ]; then
   popd
 fi
 
+pip install diffusers==0.26.3
+pip install opencv-python-headless==4.9.0.80
+pip install tomesd==0.1.3
+pip install rembg==2.0.54
+pip install lark==1.1.9
+
+pip install compel==2.0.2
+
+pip install icecream==2.1.3
+
+pip install simpleeval==0.9.13
+pip install matplotlib==3.8.3
+
 exec "$@"
