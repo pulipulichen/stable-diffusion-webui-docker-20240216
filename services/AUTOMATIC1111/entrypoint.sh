@@ -89,6 +89,8 @@ if [ -f "/data/config/auto/startup.sh" ]; then
 fi
 
 echo "Try to install rembg"
+pip install albumentations==1.4.3
+pip install pydantic==1.10.15
 pip install rembg==2.0.54
 pip install dlib==19.24.2
 

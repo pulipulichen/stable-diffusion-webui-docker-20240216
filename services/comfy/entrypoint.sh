@@ -48,6 +48,8 @@ if [ -f "/data/config/comfy/startup.sh" ]; then
   popd
 fi
 
+apt-get install -y libgl1-mesa-dev
+
 pip install diffusers==0.26.3
 pip install opencv-python-headless==4.9.0.80
 pip install tomesd==0.1.3
